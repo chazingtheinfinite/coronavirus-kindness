@@ -2,7 +2,23 @@ html * {
   font-family: "Dejavu Sans" !important;
 }
 
+.container {
+    position: relative;
+    width: 1000px;
+    height: 750px;
+}
 .mapdiv {
+    width: 1000px;
+    height: 600px;
+    margin: 5px auto;
+}
+.description { 
+    width: 600px;
+    height: 150px;
+    margin: 5px auto;
+}
+
+/*.mapdiv {
   width: 1000px;
   height: 600px;
   position: absolute;
@@ -18,6 +34,7 @@ html * {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+*/
 
 h1, h2, h3, h4, h5, h6 {
   color: #ce1b81;
