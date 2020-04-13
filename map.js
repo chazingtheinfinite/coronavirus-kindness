@@ -3,8 +3,8 @@
 var heartMarker = L.icon({
 	iconUrl: 'img/kindness-marker.png',
         iconSize:     [32, 48],
-        iconAnchor:   [22, 94],
-        popupAnchor:  [-3, -76]
+        //iconAnchor:   [22, 94],
+        popupAnchor:  [0, 0]
 });
 
 // Initialize the basemap to the container div
