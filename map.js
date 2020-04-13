@@ -1,7 +1,7 @@
 
 // Define the heart marlker
 var heartMarker = L.icon({
-	iconUrl: 'imgs/kindness-marker.png',
+	iconUrl: 'img/kindness-marker.png',
         iconSize:     [32, 48],
         iconAnchor:   [22, 94],
         popupAnchor:  [-3, -76]
