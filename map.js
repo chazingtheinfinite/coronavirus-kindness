@@ -1,4 +1,6 @@
 
+var publishedData = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSx-MgeekVffmrTB7oA7AhlGP7aEpcZIDnFBLCBQL5mEUKNnYVzoR-hT_kMuA6sIEdlLmyihIJ1oO49/pub?gid=1652908691&single=true&output=csv';
+
 // Define the heart marlker
 var heartMarker = L.icon({
 	iconUrl: 'img/kindness-marker.png',
@@ -16,8 +18,11 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attribution">CARTO</a>',
 }).addTo(mymap);
 
+
+
 // Load all data and set to the map
-d3.csv("data.csv", function(d) {
+//d3.csv("data.csv", function(d) {
+d3.csv(publishedData, function(d) {
 	return {
         	lat : d.latitude,
 		lon : d.longitude,
@@ -35,13 +40,3 @@ d3.csv("data.csv", function(d) {
 		});
 
 
-const reader = require('g-sheets-api');
-const readerOptions = {
-	sheetId: '1gPzJmXBSq8SPVccbsu4g5tYZQZi0ac0u2c2hOFRPx2I',
-	returnAllResults: true
-};
-
-reader(readerOptions, results => {
-	console.log(results);
-});
-//https://docs.google.com/spreadsheets/d/1gPzJmXBSq8SPVccbsu4g5tYZQZi0ac0u2c2hOFRPx2I/edit?usp=sharing
