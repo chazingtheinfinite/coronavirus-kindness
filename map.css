@@ -3,7 +3,7 @@ html * {
 }
 
 .container {
-    position: relative;
+    position: absolute;
     width: 1000px;
     height: 750px;
     left: 50%;
