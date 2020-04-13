@@ -1,4 +1,4 @@
-
+// This is the published Google Sheet from which the data are obtained.
 var publishedData = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSx-MgeekVffmrTB7oA7AhlGP7aEpcZIDnFBLCBQL5mEUKNnYVzoR-hT_kMuA6sIEdlLmyihIJ1oO49/pub?gid=1652908691&single=true&output=csv';
 
 // Define the heart marlker
@@ -17,8 +17,6 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
 	maxZoom: 20,
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attribution">CARTO</a>',
 }).addTo(mymap);
-
-
 
 // Load all data and set to the map
 //d3.csv("data.csv", function(d) {
