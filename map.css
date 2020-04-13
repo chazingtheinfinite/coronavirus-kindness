@@ -1,11 +1,11 @@
 html * {
-  font-family: 'Josefin Slab', serif !important;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .container {
     position: absolute;
     width: 1000px;
-    height: 750px;
+    height: 900px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -16,8 +16,8 @@ html * {
     margin: 5px auto;
 }
 .description { 
-    width: 600px;
-    height: 150px;
+    width: 800px;
+    height: 320px;
     margin: 5px auto;
 }
 
