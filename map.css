@@ -1,11 +1,14 @@
 html * {
-  font-family: "Dejavu Sans" !important;
+  font-family: 'Marcellus', serif !important;
 }
 
 .container {
     position: relative;
     width: 1000px;
     height: 750px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 .mapdiv {
     width: 1000px;
