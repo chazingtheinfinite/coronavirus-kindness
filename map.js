@@ -33,7 +33,7 @@ d3.csv(publishedData, function(d) {
 			for(var i = 0; i < data.length; i++){
 				console.log(data[i]);
 				if (data[i].lat == "" || data[i].lon == "") continue;
-				L.marker([data[i].lat, data[i].lon], {icon: heartMarker}).addTo(mymap).bindPopup("<b><a href='" + data[i].url + "'>" + data[i].title + "</a></b><br>Date: " + data[i].date + "<br>" + data[i].info).openPopup();
+				L.marker([data[i].lat, data[i].lon], {icon: heartMarker}).addTo(mymap).bindPopup("<b><a href='" + data[i].url + "' target='_blank'>" + data[i].title + "</a></b><br>Date: " + data[i].date + "<br>" + data[i].info).openPopup();
 			};
 		});
 
