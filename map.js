@@ -35,3 +35,13 @@ d3.csv("data.csv", function(d) {
 		});
 
 
+const reader = require('g-sheets-api');
+const readerOptions = {
+	sheetId: '1gPzJmXBSq8SPVccbsu4g5tYZQZi0ac0u2c2hOFRPx2I',
+	returnAllResults: true
+};
+
+reader(readerOptions, results => {
+	console.log(results);
+});
+//https://docs.google.com/spreadsheets/d/1gPzJmXBSq8SPVccbsu4g5tYZQZi0ac0u2c2hOFRPx2I/edit?usp=sharing
