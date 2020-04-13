@@ -21,23 +21,15 @@ html * {
     margin: 5px auto;
 }
 
-/*.mapdiv {
-  width: 1000px;
-  height: 600px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #ce1b81;
+  color: white;
+  text-align: center;
 }
-
-.description {
-  width: 600px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-*/
 
 h1, h2, h3, h4, h5, h6 {
   color: #ce1b81;
