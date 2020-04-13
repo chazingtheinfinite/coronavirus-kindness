@@ -1,6 +1,10 @@
+html * {
+  font-family: "Dejavu Sans" !important;
+}
+
 .mapdiv {
-  width: 600px;
-  height: 400px;
+  width: 1000px;
+  height: 600px;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -17,5 +21,5 @@
 
 h1, h2, h3, h4, h5, h6 {
   color: #ce1b81;
-  text-align: "center"; 
+  text-align: center; 
 }
