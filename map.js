@@ -27,13 +27,15 @@ d3.csv(publishedData, function(d) {
 		title: d.title,
 		info : d.information,
 		date: d.date,
-		url : d.url
+		url : d.url,
+		giver : d.giver,
+		recipient : d.recipient
 		};
 		}).then(function(data) {
 			for(var i = 0; i < data.length; i++){
 				console.log(data[i]);
 				if (data[i].lat == "" || data[i].lon == "") continue;
-				L.marker([data[i].lat, data[i].lon], {icon: heartMarker}).addTo(mymap).bindPopup("<b><a href='" + data[i].url + "' target='_blank'>" + data[i].title + "</a></b><br>Date: " + data[i].date + "<br>" + data[i].info).openPopup();
+				L.marker([data[i].lat, data[i].lon], {icon: heartMarker}).addTo(mymap).bindPopup("<b><a href='" + data[i].url + "' target='_blank'>" + data[i].title + "</a></b><br>Date: " + data[i].date + "<br>" + data[i].giver + " &#8594; " + data[i].recipient + "<br>"+ data[i].info).openPopup();
 			};
 		});
 
