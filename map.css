@@ -40,6 +40,17 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 12px;
 }
 
+.button-small {
+    color: white;
+    padding: 6px 15px;
+    background-color: #ce1b81;
+    font-size: 8px;
+}
+
 .button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.button-small:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
