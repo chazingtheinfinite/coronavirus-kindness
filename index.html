@@ -66,6 +66,33 @@
 		<p> The Coronavirus Kindness Project | Developed by <a href="https://www.linkedin.com/in/dickkevin/"><font color="white"><b>Kevin Dick</b></font></a> (Carleton University) | Curators: <a href="https://med.fsu.edu/directory/full?directoryID=22215&nav=201"><font color="white"><b>Vinita Akula</b></font></a> &amp; <a href="https://med.fsu.edu/directory/full?directoryID=20394&nav=201"><font color="white"><b>Gabby Cintron</b></font></a> (Florida State University)</p>
 	</div>
 
+
+<!-- Load all Table-Related Scripts Here -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.csv.min.js"></script>
+<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="js/dataTables.bootstrap.js"></script>
+<script type="text/javascript" src="js/csv_to_html_table.js"></script>
+<script>
+//my custom function that creates a hyperlink
+function format_link(link){
+  if (link)
+      return "<a href='" + link + "' target='_blank'>" + link + "</a>";
+    else
+      return "";
+}
+
+// initializing the table
+CsvToHtmlTable.init({
+  csv_path: publishedData,
+  element: 'explore-data',
+  allow_download: true,
+  csv_options: {separator: ',', delimiter: '"'},
+  datatables_options: {"paging": true},
+  custom_formatting: [[1, format_link]] //execute the function on the 1st column of every row
+});
+</script>	
 </body>
 </html>
 

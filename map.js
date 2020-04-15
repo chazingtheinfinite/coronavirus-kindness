@@ -54,21 +54,4 @@ d3.csv(publishedData, function(d) {
 		});
 
 
-//my custom function that creates a hyperlink
-function format_link(link){
-  if (link)
-      return "<a href='" + link + "' target='_blank'>" + link + "</a>";
-    else
-      return "";
-}
-
-// initializing the table
-CsvToHtmlTable.init({
-  csv_path: publishedData, 
-  element: 'explore-data', 
-  allow_download: true,
-  csv_options: {separator: ',', delimiter: '"'},
-  datatables_options: {"paging": true},
-  custom_formatting: [[1, format_link]] //execute the function on the 1st column of every row
-});
 
