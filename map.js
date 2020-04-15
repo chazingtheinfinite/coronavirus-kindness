@@ -43,7 +43,7 @@ d3.csv(publishedData, function(d) {
 					contributeHtml = "<br><br>Want to help? &nbsp; <a href='" + data[i].contribute + "' target='_blank'><button class='button-small'><b>Contribute</b></button></a>";
 					
 					// Append this article to the contribution DIV
-					document.getElementById('contribute').innerHTML += "<tr><td><a href='" + data[i].contribute + "' target='_blank'><button class='button'><b>Contribute</b></button></a></td><td><b><a href='" + data[i].url + "' target='_blank'>" + data[i].title + "</a></b></td></tr>";
+					document.getElementById('contribute').innerHTML += "<tr><td><a href='" + data[i].contribute + "' target='_blank'><button class='button'><b>Contribute</b></button></a></td><td><b><a href='" + data[i].url + "' target='_blank'>" + data[i].title + "</a></b></td></tr><br>";
 				}
 				// Create the Marker!
 				L.marker([data[i].lat, data[i].lon], {icon: heartMarker}).addTo(mymap).bindPopup("<b><a href='" + data[i].url + "' target='_blank'>" + data[i].title + "</a></b><br>Date: " + data[i].date + "<br>" + data[i].giver + " &#8594; " + data[i].recipient + "<br>"+ data[i].info + contributeHtml).openPopup();
