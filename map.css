@@ -60,6 +60,7 @@ table{
 }
 
 td{
+    padding: 0px 4px 0px 0px;
     word-wrap: break-word;
     vertical-align: middle;
 }
