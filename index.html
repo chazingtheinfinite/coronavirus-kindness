@@ -19,12 +19,6 @@
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
         <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
 	<script src="https://d3js.org/d3.v5.min.js"></script>
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/jquery.csv.min.js"></script>
-	<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
-	<script type="text/javascript" src="js/dataTables.bootstrap.js"></script>
-	<script type="text/javascript" src="js/csv_to_html_table.js"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,600;1,200&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="map.css">
 </head>
@@ -53,6 +47,7 @@
 		<div id='explore-data' class='description'>
 			<h3>Explore the Data</h3>
 			<a href='https://docs.google.com/spreadsheets/d/e/2PACX-1vSx-MgeekVffmrTB7oA7AhlGP7aEpcZIDnFBLCBQL5mEUKNnYVzoR-hT_kMuA6sIEdlLmyihIJ1oO49/pub?gid=1652908691&single=true&output=csv'><button class="button"><b>Download Data</b></button></a>
+			<iframe style="border-style: none;" src="data/index.html" height="950" width="600"></iframe>
 		</div>
 		
 		<div id='contribute' class='description'>
@@ -66,33 +61,6 @@
 		<p> The Coronavirus Kindness Project | Developed by <a href="https://www.linkedin.com/in/dickkevin/"><font color="white"><b>Kevin Dick</b></font></a> (Carleton University) | Curators: <a href="https://med.fsu.edu/directory/full?directoryID=22215&nav=201"><font color="white"><b>Vinita Akula</b></font></a> &amp; <a href="https://med.fsu.edu/directory/full?directoryID=20394&nav=201"><font color="white"><b>Gabby Cintron</b></font></a> (Florida State University)</p>
 	</div>
 
-
-<!-- Load all Table-Related Scripts Here -->
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/jquery.csv.min.js"></script>
-<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="js/dataTables.bootstrap.js"></script>
-<script type="text/javascript" src="js/csv_to_html_table.js"></script>
-<script>
-//my custom function that creates a hyperlink
-function format_link(link){
-  if (link)
-      return "<a href='" + link + "' target='_blank'>" + link + "</a>";
-    else
-      return "";
-}
-
-// initializing the table
-CsvToHtmlTable.init({
-  csv_path: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSx-MgeekVffmrTB7oA7AhlGP7aEpcZIDnFBLCBQL5mEUKNnYVzoR-hT_kMuA6sIEdlLmyihIJ1oO49/pub?gid=1652908691&single=true&output=csv',
-  element: 'explore-data',
-  allow_download: true,
-  csv_options: {separator: ',', delimiter: '"'},
-  datatables_options: {"paging": true},
-  custom_formatting: [[1, format_link]] //execute the function on the 1st column of every row
-});
-</script>	
 </body>
 </html>
 
