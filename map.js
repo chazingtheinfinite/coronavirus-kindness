@@ -40,7 +40,7 @@ d3.csv(publishedData, function(d) {
 				var contributeHtml = '';
 				if (data[i].contribute != "") {
 					// Add a button to the popup box					
-					contributeHtml = "<br><br>Want to help? &nbsp; &nbsp; <a href='" + data[i].contribute + "' target='_blank'><button class='button-small'><b>Contribute</b></button></a>";
+					contributeHtml = "<br><br>Want to help? &nbsp; <a href='" + data[i].contribute + "' target='_blank'><button class='button-small'><b>Contribute</b></button></a>";
 					
 					// Append this article to the contribution DIV
 					document.getElementById('contribute').innerHTML += "<tr><td><a href='" + data[i].contribute + "' target='_blank'><button class='button'><b>Contribute</b></button></a></td><td><b><a href='" + data[i].url + "' target='_blank'>" + data[i].title + "</a></b></td></tr>";
