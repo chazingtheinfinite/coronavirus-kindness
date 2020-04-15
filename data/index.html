@@ -1,5 +1,22 @@
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Explore Data</title>
+    <meta name="author" content="Kevin Dick">
+    <meta content="Display Coronavirus Kindness Project data as a searchable and filterable HTML table" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script type="text/javascript" src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
 
@@ -26,8 +43,8 @@ CsvToHtmlTable.init({
   csv_path: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSx-MgeekVffmrTB7oA7AhlGP7aEpcZIDnFBLCBQL5mEUKNnYVzoR-hT_kMuA6sIEdlLmyihIJ1oO49/pub?gid=1652908691&single=true&output=csv',
   element: 'explore-data',
   allow_download: true,
-  csv_options: {separator: ',', delimiter: '"'},
-  datatables_options: {"paging": true},
+  csv_options: {separator: ','},
+  datatables_options: {"paging": false},
   custom_formatting: [[1, format_link]] //execute the function on the 1st column of every row
 });
 </script>
