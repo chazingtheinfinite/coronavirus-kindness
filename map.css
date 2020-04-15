@@ -59,7 +59,7 @@ table{
     table-layout: fixed;
 }
 
-td{
+::slotted(td) {
     padding: 0px 4px 0px 4px;
     word-wrap: break-word;
     vertical-align: middle;
