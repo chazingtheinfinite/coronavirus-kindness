@@ -5,7 +5,7 @@ var publishedData = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSx-MgeekVf
 var heartMarker = L.icon({
 	iconUrl: 'img/kindness-marker.png',
         iconSize:     [32, 48],
-        iconAnchor:   [0, 2],
+        //iconAnchor:   [0, 2],
         popupAnchor:  [0, 0]
 });
 
