@@ -75,6 +75,7 @@ table{
 }
 
 ::slotted(td) {
+    font-size: small;
     padding: 4px;
     word-wrap: break-word;
     vertical-align: middle;
