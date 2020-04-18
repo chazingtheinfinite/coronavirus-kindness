@@ -24,6 +24,20 @@ html * {
     text-align: left;
 }
 
+.partner {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 60px; 
+}
+
+.partnerships{
+   width: 800px;
+   height: 100px;
+   margin: 5px auto;
+   text-align:center;
+}
+
 .explore {
     width: 100%;
     height: 400px;
