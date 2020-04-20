@@ -36,6 +36,10 @@ d3.csv(publishedData, function(d) {
 			for(var i = 0; i < data.length; i++){
 				console.log(data[i]);
 				if (data[i].lat == "" || data[i].lon == "") continue;
+				
+				// Ensure the datapoint is in South Africa
+				if (data[i].lat < -35.5 || data[i].lat > -19.7) continue;
+				if (data[i].lon < 11.0 || data[i].lon > 38.4) continue;
 
 				var contributeHtml = '';
 				if (data[i].contribute != "") {
