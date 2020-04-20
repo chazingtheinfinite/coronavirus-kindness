@@ -10,7 +10,7 @@ var heartMarker = L.icon({
 });
 
 // Initialize the basemap to the container div
-var mymap = L.map('map').setView([-29.9318733, 27.294098], 8);
+var mymap = L.map('map').setView([-29.173824, 24.575056], 6);
 
 // Set the basemap
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
