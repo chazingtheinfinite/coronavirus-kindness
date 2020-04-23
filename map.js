@@ -1,6 +1,31 @@
 // This is the published Google Sheet from which the data are obtained.
 var publishedData = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSx-MgeekVffmrTB7oA7AhlGP7aEpcZIDnFBLCBQL5mEUKNnYVzoR-hT_kMuA6sIEdlLmyihIJ1oO49/pub?gid=1652908691&single=true&output=csv';
 
+
+var rad_Earth  = 6378.16;
+var one_degree = (2 * Math.PI * rad_Earth) / 360;
+var one_km     = 1 / one_degree;
+
+function randomInRange(from, to, fixed) {
+  fixed = fixed || 10;
+  return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
+}
+
+function jitter(lat, lng, kms, fixed) {
+  return {
+    lat : randomInRange(
+      lat - (kms * one_km),
+      lat + (kms * one_km),
+      fixed
+    ),
+    lng : randomInRange(
+      lng - (kms * one_km),
+      lng + (kms * one_km),
+      fixed
+    )
+  };
+}
+
 // Define the heart marlker
 var heartMarker = L.icon({
 	iconUrl: 'img/kindness-marker.png',
@@ -22,8 +47,10 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
 //d3.csv("data.csv", function(d) {
 d3.csv(publishedData, function(d) {
 	return {
-        	lat : d.latitude,
-		lon : d.longitude,
+		// Jitter each location slightly to prevent overlap
+		var jittered = jitter(d.latitude, d.longitude, 0.1); // Jitter with radius 100m (0.1kms)
+        	lat : jittered.lat,
+		lon : jittered.lng,
 		title: d.title,
 		info : d.information,
 		date: d.date,
