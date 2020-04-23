@@ -80,7 +80,7 @@ d3.csv(publishedData, function(d) {
 			document.getElementById('contribute').innerHTML += "</table>";
 
 			// Wrap wording in all table descriptions
-			document.getElementsByTagName("td").style.wordWrap = "break-word";
+			//document.getElementsByTagName("td").style.wordWrap = "break-word";
 		});
 
 
