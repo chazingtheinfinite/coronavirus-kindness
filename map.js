@@ -26,8 +26,6 @@ function jitter(lat, lng, kms, fixed) {
   };
 };
 
-console.log(jitter(-26.4853429150483, -49.072945734375, 5));
-
 // Define the heart marlker
 var heartMarker = L.icon({
 	iconUrl: 'img/kindness-marker.png',
@@ -82,7 +80,7 @@ d3.csv(publishedData, function(d) {
 			document.getElementById('contribute').innerHTML += "</table>";
 
 			// Wrap wording in all table descriptions
-			document.getElementById("towrap").style.wordWrap = "break-word";
+			document.getElementsByTagName("td").style.wordWrap = "break-word";
 		});
 
 
