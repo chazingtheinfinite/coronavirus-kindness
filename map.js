@@ -24,7 +24,7 @@ function jitter(lat, lng, kms, fixed) {
       fixed
     )
   };
-}
+};
 
 // Define the heart marlker
 var heartMarker = L.icon({
