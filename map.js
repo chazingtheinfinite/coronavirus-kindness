@@ -48,9 +48,9 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
 // Load all data and set to the map
 //d3.csv("data.csv", function(d) {
 d3.csv(publishedData, function(d) {
+	// Jitter each location slightly to prevent overlap
+        var jittered = jitter(d.latitude, d.longitude, 0.1, 5); // Jitter with radius 100m (0.1kms)
 	return {
-		// Jitter each location slightly to prevent overlap
-		var jittered = jitter(-26.4853429150483, -49.072945734375, 5); //jitter(d.latitude, d.longitude, 0.1, 5); // Jitter with radius 100m (0.1kms)
         	lat : jittered.lat,
 		lon : jittered.lng,
 		title: d.title,
