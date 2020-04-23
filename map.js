@@ -26,6 +26,8 @@ function jitter(lat, lng, kms, fixed) {
   };
 };
 
+console.log(jitter(-26.4853429150483, -49.072945734375, 5));
+
 // Define the heart marlker
 var heartMarker = L.icon({
 	iconUrl: 'img/kindness-marker.png',
