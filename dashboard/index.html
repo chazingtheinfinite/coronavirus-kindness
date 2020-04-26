@@ -8,7 +8,13 @@
 		<iframe src="https://api.gdeltproject.org/api/v2/geo/geo?query=kindness&mode=sourcecountry" scrolling="no" width=100% frameborder="0" height=500></iframe>		
 		
 		<br><br>
-
+		<h2>Television News Mentions of "Coronavirus" or "Covid-19"</h2>
+		<style>
+		.respviz { height: 400px; }
+		@media screen and (min-width : 0px) and (max-width : 767px){ .respviz { height: 250px; } }
+		</style>
+		<iframe src="https://api.gdeltproject.org/api/v2/tvai/tvai?format=html&startdatetime=20190801000000&enddatetime=20200426235959&query=%20(cap:%22CORONAVIRUS%22%20OR%20cap:%22COVID19%22%20OR%20cap:%22COVID-19%22)%20%20(station:KGO%20OR%20station:KPIX%20OR%20station:KNTV%20OR%20station:CNN%20OR%20station:MSNBC%20OR%20station:FOXNEWS%20OR%20station:BBCNEWS%20)%20&mode=timelinevol&timezoom=yes" scrolling="no" width=100% frameborder="0" class="respviz"></iframe>
+		<br><br>
 		<h2>Streamgraph - Mentions of Kindness in TV Transcripts</h2><br>
 		<p>August 1st, 2019 to Now</p>
 		<style>
@@ -16,6 +22,12 @@
 		@media screen and (min-width : 0px) and (max-width : 767px){ .respviz { height: 250px; } }
 		</style>
 		<iframe src="https://api.gdeltproject.org/api/v2/tvai/tvai?format=html&startdatetime=20190801000000&enddatetime=20200426235959&query=%20cap:%22KINDNESS%22%20%20(station:KGO%20OR%20station:KPIX%20OR%20station:KNTV%20OR%20station:CNN%20OR%20station:MSNBC%20OR%20station:FOXNEWS%20OR%20station:BBCNEWS%20)%20&mode=timelinevolstream&timezoom=yes" scrolling="no" width=100% frameborder="0" class="respviz"></iframe>
+		
+		<br><br>
+		<h2>Google Trends Search-Based Global Interest in "Kindness" over the Last 12 Months</h2>
+		<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2152_RC04/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"kindness","geo":"","time":"today 12-m"}],"category":0,"property":""}, {"exploreQuery":"q=kindness&date=today 12-m","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
+		<br> 
+		<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2152_RC04/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("GEO_MAP", {"comparisonItem":[{"keyword":"kindness","geo":"","time":"today 12-m"}],"category":0,"property":""}, {"exploreQuery":"q=kindness&date=today 12-m","guestPath":"https://trends.google.com:443/trends/embed/"}); </script> 
 
 	</body>
 </html>
