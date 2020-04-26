@@ -4,11 +4,18 @@
 	</head>
 
 	<body>
+		<h2>Global News Metions of "Kindness" - Last 24 Hours</h2>
+		<iframe src="https://api.gdeltproject.org/api/v2/geo/geo?query=kindness&mode=sourcecountry" scrolling="no" width=100% frameborder="0" height=500></iframe>		
+		
+		<br><br>
+
+		<h2>Streamgraph - Mentions of Kindness in TV Transcripts</h2><br>
+		<p>August 1st, 2019 to Now</p>
 		<style>
 		.respviz { height: 400px; }
 		@media screen and (min-width : 0px) and (max-width : 767px){ .respviz { height: 250px; } }
 		</style>
-		<iframe src="https://api.gdeltproject.org/api/v2/tvai/tvai?format=html&startdatetime=20200304120000&enddatetime=20200412120000&query=%20cap:%22KINDNESS%22%20%20(station:KGO%20OR%20station:KPIX%20OR%20station:KNTV%20OR%20station:CNN%20OR%20station:MSNBC%20OR%20station:FOXNEWS%20OR%20station:BBCNEWS%20)%20&mode=timelinevolstream&timezoom=yes&TIMESPAN=" scrolling="no" width=100% frameborder="0" class="respviz"></iframe>
+		<iframe src="https://api.gdeltproject.org/api/v2/tvai/tvai?format=html&startdatetime=20190801000000&enddatetime=20200426235959&query=%20cap:%22KINDNESS%22%20%20(station:KGO%20OR%20station:KPIX%20OR%20station:KNTV%20OR%20station:CNN%20OR%20station:MSNBC%20OR%20station:FOXNEWS%20OR%20station:BBCNEWS%20)%20&mode=timelinevolstream&timezoom=yes" scrolling="no" width=100% frameborder="0" class="respviz"></iframe>
 
 	</body>
 </html>
