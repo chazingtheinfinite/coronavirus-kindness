@@ -1,6 +1,8 @@
-// This is the published Google Sheet from which the data are obtained.
-var publishedData = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSx-MgeekVffmrTB7oA7AhlGP7aEpcZIDnFBLCBQL5mEUKNnYVzoR-hT_kMuA6sIEdlLmyihIJ1oO49/pub?gid=1652908691&single=true&output=csv';
+window.googleDocCallback = function () { return true; };
 
+// This is the published Google Sheet from which the data are obtained.
+var publishedData = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSx-MgeekVffmrTB7oA7AhlGP7aEpcZIDnFBLCBQL5mEUKNnYVzoR-hT_kMuA6sIEdlLmyihIJ1oO49/pub?gid=1652908691&single=true&output=csv&callback=googleDocCallback';
+var corsProxy     = '';
 
 var rad_Earth  = 6378.16;
 var one_degree = (2 * Math.PI * rad_Earth) / 360;
