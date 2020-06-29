@@ -1,7 +1,5 @@
-window.googleDocCallback = function () { return true; };
-
 // This is the published Google Sheet from which the data are obtained.
-var publishedData = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSx-MgeekVffmrTB7oA7AhlGP7aEpcZIDnFBLCBQL5mEUKNnYVzoR-hT_kMuA6sIEdlLmyihIJ1oO49/pub?gid=1652908691&single=true&output=csv&callback=googleDocCallback';
+var publishedData = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSx-MgeekVffmrTB7oA7AhlGP7aEpcZIDnFBLCBQL5mEUKNnYVzoR-hT_kMuA6sIEdlLmyihIJ1oO49/pub?gid=1652908691&single=true&output=csv';
 var corsProxy     = '';
 
 var rad_Earth  = 6378.16;
@@ -48,6 +46,8 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
 // Load all data and set to the map
 //d3.csv("data.csv", function(d) {
 d3.csv(publishedData, function(d) {
+	window.googleDocCallback = function () { return true; };
+
 	// Jitter each location slightly to prevent overlap
         var jittered = jitter(parseFloat(d.latitude), parseFloat(d.longitude), 0.3); // Jitter with radius 100m (0.1kms)
 	return {
