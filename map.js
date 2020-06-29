@@ -1,6 +1,7 @@
 // This is the published Google Sheet from which the data are obtained.
-var publishedData = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSx-MgeekVffmrTB7oA7AhlGP7aEpcZIDnFBLCBQL5mEUKNnYVzoR-hT_kMuA6sIEdlLmyihIJ1oO49/pub?output=csv';
+//var publishedData = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSx-MgeekVffmrTB7oA7AhlGP7aEpcZIDnFBLCBQL5mEUKNnYVzoR-hT_kMuA6sIEdlLmyihIJ1oO49/pub?output=csv';
 
+var publishedData = 'https://spreadsheets.google.com/tq?key=/1gPzJmXBSq8SPVccbsu4g5tYZQZi0ac0u2c2hOFRPx2I&tqx=out:cs';
 var rad_Earth  = 6378.16;
 var one_degree = (2 * Math.PI * rad_Earth) / 360;
 var one_km     = 1 / one_degree;
